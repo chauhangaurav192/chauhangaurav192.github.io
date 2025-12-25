@@ -2,148 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gaurav Chauhan | DevOps Portfolio</title>
 
 <style>
-body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#fff7ec;
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* HERO */
-.hero{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px;
-}
-.hero-left h1{
-  font-size:48px;
-  margin:10px 0;
-}
-.hero-left span{
-  color:#7b4a3f;
-}
-.type{
-  font-size:22px;
-  color:#7b4a3f;
-  height:30px;
-}
-.btn{
-  margin-top:20px;
-  padding:12px 24px;
-  background:#7b4a3f;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  cursor:not-allowed;
+body {
+  background: #fdf6ec;
+  color: #3b2f2f;
+  scroll-behavior: smooth;
 }
 
-/* CARTOON */
-.hero-right img{
-  width:360px;
+/* ===== HEADER ===== */
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f6e7d8, #e4c5a2);
+  animation: fadeIn 1.5s ease;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #6b4f4f;
+  margin-bottom: 20px;
   animation: float 3s ease-in-out infinite;
 }
-@keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-  100%{transform:translateY(0);}
+
+header h1 {
+  font-size: 48px;
 }
 
-/* SECTION */
-.section{
-  background:#7b4a3f;
-  color:#fff;
-  padding:60px;
-}
-.card{
-  background:#fff3dd;
-  color:#000;
-  border-radius:14px;
-  padding:30px;
+header h1 span {
+  color: #6b4f4f;
 }
 
-/* SKILLS */
-.skill{
-  margin:15px 0;
-}
-.bar{
-  background:#ddd;
-  height:10px;
-  border-radius:20px;
-}
-.fill{
-  height:10px;
-  background:#7b4a3f;
-  border-radius:20px;
+header p {
+  font-size: 20px;
+  margin: 10px 0 25px;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #6b4f4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4e3838;
+}
+
+/* ===== SKILLS ===== */
+.skills {
+  padding: 80px 10%;
+  background: #fff7ec;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  font-weight: bold;
+}
+
+.progress {
+  background: #e6d3b1;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 12px;
+  width: 0;
+  background: #6b4f4f;
+  border-radius: 30px;
+  animation: load 2s forwards;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #6b4f4f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+
+@keyframes load {
+  from {width: 0;}
+  to {width: var(--level);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-left">
-    👋 I'm
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-content">
+    <img src="profile.jpg" alt="Gaurav Chauhan" class="profile-img">
     <h1>Gaurav <span>Chauhan</span></h1>
-    <div class="type" id="typing"></div>
-    <button class="btn">Download CV (Coming Soon)</button>
+    <p>Cloud & DevOps Engineer</p>
+    <a href="#" class="btn">Download CV (Coming Soon)</a>
+  </div>
+</header>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills">
+  <h2>Skills & Experience</h2>
+
+  <div class="skill">
+    <span>Linux</span>
+    <div class="progress">
+      <div class="progress-bar" style="--level:90%"></div>
+    </div>
   </div>
 
-  <div class="hero-right">
-    <!-- BOY CARTOON -->
-    <img src="https://i.imgur.com/9QZ7YzG.png" alt="Developer">
-  </div>
-</div>
-
-<!-- SKILLS -->
-<div class="section">
-  <div class="card">
-    <h2>Skills & Experience</h2>
-
-    <div class="skill">Linux
-      <div class="bar"><div class="fill" style="width:95%"></div></div>
-    </div>
-
-    <div class="skill">Docker
-      <div class="bar"><div class="fill" style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">AWS
-      <div class="bar"><div class="fill" style="width:85%"></div></div>
-    </div>
-
-    <div class="skill">CI/CD
-      <div class="bar"><div class="fill" style="width:80%"></div></div>
+  <div class="skill">
+    <span>Docker</span>
+    <div class="progress">
+      <div class="progress-bar" style="--level:85%"></div>
     </div>
   </div>
-</div>
 
+  <div class="skill">
+    <span>AWS</span>
+    <div class="progress">
+      <div class="progress-bar" style="--level:80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>CI/CD</span>
+    <div class="progress">
+      <div class="progress-bar" style="--level:75%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-© 2025 Gaurav Chauhan | DevOps Portfolio
+  © 2025 Gaurav Chauhan | DevOps Portfolio
 </footer>
-
-<!-- TYPING ANIMATION -->
-<script>
-const text = ["DevOps Engineer", "Cloud | AWS", "Docker | CI/CD"];
-let i=0,j=0,del=false;
-function type(){
-  document.getElementById("typing").innerHTML =
-  text[i].substring(0,j);
-  if(!del && j++ === text[i].length+1) del=true;
-  if(del && j-- === 0){ del=false; i=(i+1)%text.length; }
-  setTimeout(type,120);
-}
-type();
-</script>
 
 </body>
 </html>
