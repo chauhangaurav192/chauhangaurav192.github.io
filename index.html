@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gaurav Chauhan | Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffaf2;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+}
+
+.left h1 {
+  color: #6b4f4f;
+}
+
+.left h2 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.left h3 {
+  color: #6b4f4f;
+  font-size: 24px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #6b4f4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.right img {
+  width: 300px;
+}
+
+.skills {
+  background: #fbead1;
+  padding: 60px;
+}
+
+.skills h2 {
+  font-size: 36px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.projects {
+  background: #fffaf2;
+  padding: 60px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 6px solid #6b4f4f;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #6b4f4f;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right img {
+    width: 220px;
+    margin-top: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="left">
+    <h1>👋 I'm</h1>
+    <h2>Gaurav Chauhan</h2>
+    <h3 id="typing"></h3>
+    <a href="#" class="btn">Download CV</a>
+  </div>
+
+  <div class="right">
+    <img src="https://i.imgur.com/9Xn4ZQZ.png" alt="developer">
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Skills & Experience</h2>
+  <p>
+    DevOps & Cloud enthusiast with hands-on experience in Linux,
+    Docker, AWS, and project-based learning.
+  </p>
+
+  <ul>
+    <li>Linux</li>
+    <li>AWS (EC2, IAM)</li>
+    <li>Docker & Docker Compose</li>
+    <li>Git & GitHub</li>
+    <li>PHP & MySQL</li>
+  </ul>
+</section>
+
+<section class="projects">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>Crime Reporting System</h3>
+    <p>Final year PHP & MySQL project for online crime reporting.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Travel Buddy Website</h3>
+    <p>PHP-based travel website with authentication & database.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Dockerized Web Application</h3>
+    <p>Containerized app using Docker & Docker Compose.</p>
+  </div>
+</section>
+
+<script>
+const text = "DevOps | Cloud | Docker | AWS";
+let index = 0;
+
+function typeEffect() {
+  document.getElementById("typing").innerHTML =
+    text.slice(0, index);
+  index++;
+  if (index <= text.length) {
+    setTimeout(typeEffect, 100);
+  }
+}
+typeEffect();
+</script>
+
+</body>
+</html>
 
